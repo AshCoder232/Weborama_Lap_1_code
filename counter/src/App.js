@@ -1,24 +1,42 @@
 
 import './App.css';
+import { useState, useEffect } from "react"
 
-const App = () =>{
+function App() {
   
-  let a = 10;
+
+  useEffect(() => {
+    console.log("Re Render");
+  })
+
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(prev => prev + 1);
+  }
+  const decrement = () => {
+    setCount(prev => prev - 1);
+  }
+  const reset = () => {
+    setCount(0);
+  }
+
+
   return (
-    <div className="App">
-      <p>
-        Edit <code>src/App.js</code> and save to reload.
-      </p>
-      <header className="App-header">
-      {a}
-      <h1>Hello World</h1>
-      
+    <div id="counter">
+      <h1 id="heading">Digital Counter App</h1>
+      <div className="circle">
+        <h2 id="screen">{count}</h2>
+        <button id="plus" onClick={increment}>Add</button>
+        <button id="minus" onClick={decrement}>Subtract</button>
+        <button id="reset" onClick={reset}>Reset</button>
 
-        
+      </div>
 
-      </header>
+
     </div>
   );
 }
+
 
 export default App;

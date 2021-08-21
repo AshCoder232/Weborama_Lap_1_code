@@ -1,3 +1,5 @@
+@import url('http://fonts.cdnfonts.com/css/digital-7-mono');
+
 .App {
   text-align: center;
 }
@@ -13,16 +15,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
 
 
@@ -33,4 +25,83 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body{
+  background: #531CB3;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #531CB3, #944BBB);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #531CB3, #944BBB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#heading{
+  position: relative;
+  color: white;
+  
+  text-align: center;
+  font-family: 'ubuntu';
+  font-size: 40px;
+
+
+}
+.circle{
+  position: absolute;
+  left: 50%;
+  top:50%; 
+  width: 70vh;
+  height: 70vh;
+  background-image: url("https://wallpapercave.com/wp/wp3356771.jpg");
+  background-size: cover;
+  border-radius: 90%;
+  transform: translate(-50%,-50%);
+}
+#screen{
+  position: relative;
+  width: 70%;
+  height: 20%;
+  background-color: teal;
+  top: 20%;
+  left: 11%;
+  border: white solid 5px;
+  border-radius: 8%;
+  color: yellow;
+  font-family: 'Digital-7 Mono';
+  text-align: right;
+  font-size: 45px;
+  padding: 6px 10px 6px 10px;
+  
+
+}
+button{
+  width: 18%;
+  height: 18%; 
+  background-color: rgb(255, 8, 8);
+  border-radius: 100%;
+  border: silver solid 4px;
+
+}
+#plus{
+  position: relative;
+  top: 27%;
+  left: 16%;
+  font-size: 16px;
+}
+#minus{
+  position: relative;
+  top: 27%;
+  left: 22%;
+  font-size: 16px;
+
+}
+#reset{
+  position: relative;
+  top: 27%;
+  left: 28%;
+  font-size: 16px;
+
+}
+
+
+button:hover{
+  transform: scale(1.08);
+  background-color: blue;
+  color: yellow;
 }
